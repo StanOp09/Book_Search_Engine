@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://stanlou09:0YKgSUnj3lSIveMw@bootcamp.mq1yue5.mongodb.net/googlebooks');
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_path);
 
 module.exports = mongoose.connection;
