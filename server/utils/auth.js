@@ -39,12 +39,6 @@ module.exports = {
     next();
   },
 
-  // authMiddleware: function ({ req }) {
-  //   let token = req.body.token || req.query.token || req.headers.authorization;
-
-
-
-
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
 
