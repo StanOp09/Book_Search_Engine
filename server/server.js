@@ -1,21 +1,24 @@
+require('dotenv').config();
 const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
 const bcrypt = require('bcrypt');
-require('dotenv').config();
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const routes = require('./routes');
 
-const app = express();
+
+
 const PORT = process.env.PORT || 3001;
+const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
+
+// const routes = require('./routes');
 
 const startApolloServer = async () => {
   await server.start();
@@ -43,7 +46,7 @@ const startApolloServer = async () => {
     });
   }
 
-  app.use(routes);
+  // app.use(routes);
 
   db.once('open', () => {
     app.listen(PORT, () => {
