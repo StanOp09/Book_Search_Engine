@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/client": "^3.7.15",
+    "bcrypt": "^5.0.0",
     "@stripe/stripe-js": "^1.54.0",
     "@testing-library/react": "^14.0.0",
     "graphql": "^16.6.0",
