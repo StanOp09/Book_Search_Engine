@@ -4,6 +4,7 @@ const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
 const bcrypt = require('bcrypt');
+require('dotenv').config();
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
