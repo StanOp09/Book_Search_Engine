@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/googlebooks');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://stanlou09:0YKgSUnj3lSIveMw@bootcamp.mq1yue5.mongodb.net/googlebooks');
 
 module.exports = mongoose.connection;
 
