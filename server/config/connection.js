@@ -3,7 +3,7 @@ const encodedPassword = encodeURIComponent(password);
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/googlebooks');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://stanlou09:${encodedPassword}@bootcamp.mq1yue5.mongodb.net/?retryWrites=true&w=majority/googlebooks');
 
 module.exports = mongoose.connection;
 
