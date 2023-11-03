@@ -5,6 +5,9 @@
 
 // module.exports = mongoose.connection;
 
+
+const password = 'Stanop09#';
+const encodedPassword = encodeURIComponent(password);
 require('dotenv').config();
 const { connect, connection } = require('mongoose');
 const connectionString = process.env.MONGODB_URI;
